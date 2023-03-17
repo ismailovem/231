@@ -14,7 +14,6 @@ public class UserServiceImpl implements UserService {
         this.dao = dao;
     }
     @Override
-    @Transactional
     public List<User> getAll() {
         return dao.getAll();
     }
@@ -22,9 +21,7 @@ public class UserServiceImpl implements UserService {
     @Transactional
     public void save(User user) { dao.save(user); }
     @Override
-    @Transactional
     public User findById(Long id) { return dao.findById(id); }
-    @Transactional
     @Override
     public void update(Long id,User user) { dao.update(id,user); }
     @Transactional

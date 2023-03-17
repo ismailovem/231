@@ -25,6 +25,7 @@
                     <td><input type="submit" value="edit" /></td>
                 </form>
                 <form th:method="delete" th:action="@{/delete/{id}(id=${user.id})}">
+                    <input type="hidden" name="_method" value="patch" />
                     <td><input type="submit" value="delete" /></td>
                 </form>
             </tr>
